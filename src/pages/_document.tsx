@@ -6,7 +6,6 @@ const MyDocument = () => {
       <Head></Head>
       <body className="bg-white text-black antialiased">
         <Main />
-        <div id="root"></div>
         <NextScript />
       </body>
     </Html>
