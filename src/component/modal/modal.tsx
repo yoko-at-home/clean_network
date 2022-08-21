@@ -10,6 +10,7 @@ export const ModalComponent = () => {
   return (
     <>
       <Modal
+        withCloseButton={false}
         onClose={() => setOpened(false)}
         centered
         opened={opened}
