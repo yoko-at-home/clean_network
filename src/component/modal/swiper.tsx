@@ -3,10 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 // import required modules
-import { Parallax, Pagination, Navigation } from "swiper";
+import { Pagination } from "swiper";
 import { data } from "src/component/modal/data";
 
 export const SwiperCards = () => {
@@ -19,7 +18,7 @@ export const SwiperCards = () => {
           clickable: true,
         }}
         navigation={true}
-        modules={[Parallax, Pagination, Navigation]}
+        modules={[Pagination]}
         className="mx-auto flex h-[70vh] flex-col bg-cover bg-center p-6 text-white"
         style={
           {
