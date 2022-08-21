@@ -20,17 +20,25 @@ export const SwiperCards = () => {
         }}
         navigation={true}
         modules={[Parallax, Pagination, Navigation]}
-        className="mx-auto flex h-[70vh] flex-col bg-cover bg-center py-6 text-white"
-        style={{
-          backgroundImage:
-            "url(https://swiperjs.com/demos/images/nature-1.jpg)",
-        }}
+        className="mx-auto flex h-[70vh] flex-col bg-cover bg-center p-6 text-white"
+        style={
+          {
+            // backgroundImage:
+            //   "url(https://swiperjs.com/demos/images/nature-1.jpg)",
+          }
+        }
       >
         {data.map((item: any) => {
           return (
             <SwiperSlide
               key={item.id}
               className="flex flex-col justify-center pl-20 text-white"
+              style={
+                {
+                  // "--swiper-navigation-color": "#fff",
+                  // "--swiper-pagination-color": "#fff",
+                }
+              }
             >
               <div className="mb-10 text-5xl font-bold">{item.title}</div>
               <div>

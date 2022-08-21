@@ -1,20 +1,33 @@
-import { useMantineTheme } from "@mantine/core";
+import { Modal, useMantineTheme } from "@mantine/core";
 import { useState } from "react";
 import AnimatedText from "react-animated-text-content";
-import { useModal } from "react-hooks-use-modal";
-import { CardModal } from "src/component/modal/modalCard";
+import { SwiperCards } from "src/component/modal/swiper";
 
 export const ModalComponent = () => {
-  const [isOpenModal, setIsOpenModal] = useState(false);
-  const [Modal, open, close] = useModal("root", {
-    preventScroll: true,
-  });
-  const handleOnClick = () => {
-    setIsOpenModal(true);
-    open();
-  };
+  const [opened, setOpened] = useState(false);
+  const handleOnClick = () => setOpened(true);
+  const theme = useMantineTheme();
   return (
     <>
+      <Modal
+        onClose={() => setOpened(false)}
+        centered
+        opened={opened}
+        overlayColor={
+          theme.colorScheme === "dark"
+            ? theme.colors.dark[9]
+            : theme.colors.gray[2]
+        }
+        overlayOpacity={0.55}
+        overlayBlur={3}
+        size="calc(100vw - 87px)"
+        title="Welcome to グラフ管理アプリ"
+        className=""
+      >
+        <div className="w-5/6 p-20">
+          <SwiperCards />
+        </div>
+      </Modal>
       <div className="flex h-96 items-center justify-center">
         <button type="button" onClick={handleOnClick}>
           <AnimatedText
@@ -38,9 +51,6 @@ export const ModalComponent = () => {
           </AnimatedText>
         </button>
       </div>
-      <Modal>
-        <CardModal />
-      </Modal>
     </>
   );
 };
