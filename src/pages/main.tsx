@@ -7,6 +7,8 @@ const Main: NextPage = () => {
     <Layout>
       <div>
         Main page
+        <SwiperCards />
+      </div>
     </Layout>
   );
 };
