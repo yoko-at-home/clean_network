@@ -30,18 +30,18 @@ export const SwiperCards = () => {
           return (
             <SwiperSlide
               key={item.id}
-              className="flex flex-col justify-between px-10 text-white"
+              className="flex flex-col justify-center pl-20 text-white"
             >
-              <div className="text-5xl">{item.title}</div>
+              <div className="mb-10 text-5xl font-bold">{item.title}</div>
               <div>
-                <div className="text-lg">{item.desc}</div>
+                <div className="text-lg font-semibold">{item.desc}</div>
                 <div className="text-sm">{item.desc2}</div>
                 <div className="text-sm">{item.desc2}</div>
                 <div className="text-sm">{item.desc2}</div>
                 <div className="text-sm">{item.desc2}</div>
                 <div className="text-sm">{item.desc2}</div>
                 <div className="text-sm">{item.desc2}</div>
-                <div className="text-lg">{item.desc}</div>
+                <div className="text-lg font-semibold">{item.desc}</div>
                 <div className="text-sm">{item.desc2}</div>
                 <div className="text-sm">{item.desc2}</div>
                 <div className="text-sm">{item.desc2}</div>
@@ -49,7 +49,7 @@ export const SwiperCards = () => {
                 <div className="text-sm">{item.desc2}</div>
                 <div className="text-sm">{item.desc2}</div>
                 <div className="text-sm">{item.desc2}</div>
-                <div className="text-lg">{item.desc}</div>
+                <div className="text-lg font-semibold">{item.desc}</div>
                 <div className="text-sm">{item.desc2}</div>
                 <div className="text-sm">{item.desc2}</div>
                 <div className="text-sm">{item.desc2}</div>
