@@ -1,7 +1,6 @@
 import { Modal, useMantineTheme } from "@mantine/core";
 import { useState } from "react";
 import AnimatedText from "react-animated-text-content";
-import { SwiperCards } from "src/component/modal/swiper";
 
 export const ModalComponent = () => {
   const [opened, setOpened] = useState(false);
@@ -21,12 +20,29 @@ export const ModalComponent = () => {
         }
         overlayOpacity={0.55}
         overlayBlur={3}
-        size="calc(100vw - 87px)"
-        title="Welcome to グラフ管理アプリ"
+        size="calc(100vw - 300px)"
+        title="クラスタ"
         className=""
       >
-        <div className="w-5/6 p-20">
-          <SwiperCards />
+        <div className="h-screen">
+          <div>汚染度合</div>
+          <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla qui
+            est illo sunt quo harum et, sequi molestias nesciunt iste dolorem
+            doloremque quam magnam doloribus quod labore modi mollitia ipsa.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla qui
+            est illo sunt quo harum et, sequi molestias nesciunt iste dolorem
+            doloremque quam magnam doloribus quod labore modi mollitia ipsa.
+          </div>
+          <div>活動履歴</div>
+          <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla qui
+            est illo sunt quo harum et, sequi molestias nesciunt iste dolorem
+            doloremque quam magnam doloribus quod labore modi mollitia ipsa.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla qui
+            est illo sunt quo harum et, sequi molestias nesciunt iste dolorem
+            doloremque quam magnam doloribus quod labore modi mollitia ipsa.
+          </div>
         </div>
       </Modal>
       <div className="flex h-96 items-center justify-center">
@@ -43,12 +59,12 @@ export const ModalComponent = () => {
             interval={0.06}
             duration={0.8}
             tag="p"
-            className="animated-paragraph font-mono text-7xl font-black"
+            className="animated-paragraph font-mono text-2xl font-black"
             includeWhiteSpaces
             threshold={0.1}
             rootMargin="20%"
           >
-            Tap to Start
+            Tap to Show Reslut
           </AnimatedText>
         </button>
       </div>
