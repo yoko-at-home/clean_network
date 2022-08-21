@@ -14,10 +14,10 @@ export const Layout: FC<Body> = (props) => {
   const router = useRouter();
   const root = router.asPath === "/";
   return (
-    <div className="flex min-h-screen flex-col text-[#25262B]">
+    <div className="flex min-h-screen flex-col">
       <HeaderPart inView={inView} />
       <div
-        className={`mx-auto flex min-w-full grow flex-col justify-start ${
+        className={`mx-auto flex min-w-full grow flex-col justify-start  bg-green-900/30 ${
           root ? "" : "max-w-7xl px-4"
         }`}
       >

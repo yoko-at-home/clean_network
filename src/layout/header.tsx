@@ -19,15 +19,19 @@ export const HeaderPart = ({ inView }: Props) => {
       >
         <NavMobile />
         <Text size="lg" weight={700}>
-          <Link href="/">Shimabu IT University</Link>
+          <Link href="/">
+            <span className="bg-gradient-to-r from-green-600 to-violet-900 bg-clip-text font-mono text-xl tracking-widest text-transparent">
+              グラフ管理アプリ
+            </span>
+          </Link>
         </Text>
         <div className="flex leading-6">
           <div className="hidden sm:block">
             <Navigation />
           </div>
-          <div className="border-1 border-gray-400">
+          {/* <div className="border-1 border-gray-400">
             <img src="/assets/svgs/night.svg" alt="night mode" />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
