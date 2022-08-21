@@ -42,7 +42,7 @@ const Main: NextPage = () => {
               />
             </div>
           </div>
-          <div className="flex w-1/4 flex-col justify-between sm:flex-row">
+          <div className="flex w-1/4 flex-col justify-end sm:flex-row">
             <Button
               color="indigo"
               variant="outline"
