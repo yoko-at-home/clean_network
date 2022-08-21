@@ -5,7 +5,7 @@ import userAnimationIcon from "./108599-insurance.json";
 
 export const UserIcon: NextPage = () => {
   return (
-    <div className="h-8 w-8 rounded-full">
+    <div className="h-8 w-8 rounded-full text-white">
       <Lottie animationData={userAnimationIcon} autoPlay={true} loop={false} />
     </div>
   );

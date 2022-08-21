@@ -4,7 +4,7 @@ import { Burger } from "@mantine/core";
 
 const items = [
   { href: "/", label: "Home" },
-  { href: "/user", label: "User" },
+  // { href: "/user", label: "User" },
   { href: "/main", label: "Main" },
 ];
 export const Navigation = () => {
