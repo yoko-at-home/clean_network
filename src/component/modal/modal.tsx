@@ -29,7 +29,7 @@ export const ModalComponent = () => {
         overlayOpacity={0.55}
         overlayBlur={3}
         size="100vw"
-        title="クラスタ"
+        title=""
         className=""
       >
         <Contents />
@@ -38,27 +38,29 @@ export const ModalComponent = () => {
         {isMobile ? (
           <Contents />
         ) : (
-          <button type="button" onClick={handleOnClick}>
-            <AnimatedText
-              type="words" // animate words or chars
-              animation={{
-                x: "200px",
-                y: "-20px",
-                scale: 1.1,
-                ease: "ease-in-out",
-              }}
-              animationType="float"
-              interval={0.06}
-              duration={0.8}
-              tag="p"
-              className="animated-paragraph font-mono text-2xl font-black"
-              includeWhiteSpaces
-              threshold={0.1}
-              rootMargin="20%"
-            >
-              Tap to Show Reslut
-            </AnimatedText>
-          </button>
+          <div className="mt-20">
+            <button type="button" onClick={handleOnClick}>
+              <AnimatedText
+                type="words" // animate words or chars
+                animation={{
+                  x: "200px",
+                  y: "-20px",
+                  scale: 1.1,
+                  ease: "ease-in-out",
+                }}
+                animationType="float"
+                interval={0.06}
+                duration={0.8}
+                tag="p"
+                className="animated-paragraph font-mono text-2xl font-black"
+                includeWhiteSpaces
+                threshold={0.1}
+                rootMargin="20%"
+              >
+                Tap to Show Reslut
+              </AnimatedText>
+            </button>
+          </div>
         )}
       </div>
     </>
