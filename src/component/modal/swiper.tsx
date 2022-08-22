@@ -10,36 +10,25 @@ import { data } from "src/component/modal/data";
 
 export const SwiperCards = () => {
   return (
-    <div className="mx-auto flex h-[65vh] max-w-5xl">
+    <div className="mx-auto my-3 flex w-screen justify-center sm:my-10">
       <Swiper
         speed={600}
         parallax={true}
         pagination={{
           clickable: true,
         }}
-        navigation={true}
         modules={[Pagination]}
-        className="mx-auto flex h-[70vh] flex-col bg-cover bg-center p-6 text-white"
-        style={
-          {
-            // backgroundImage:
-            //   "url(https://swiperjs.com/demos/images/nature-1.jpg)",
-          }
-        }
+        className="sm:pb-20"
       >
         {data.map((item: any) => {
           return (
             <SwiperSlide
               key={item.id}
-              className="flex flex-col justify-center pl-20 text-white"
-              style={
-                {
-                  // "--swiper-navigation-color": "#fff",
-                  // "--swiper-pagination-color": "#fff",
-                }
-              }
+              className="flex flex-col justify-start pl-6 sm:justify-center sm:pl-20"
             >
-              <div className="mb-10 text-5xl font-bold">{item.title}</div>
+              <div className="mb-6 text-3xl font-bold sm:text-5xl">
+                {item.title}
+              </div>
               <div>
                 <div className="text-lg font-semibold">{item.desc}</div>
                 <div className="text-sm">{item.desc2}</div>
