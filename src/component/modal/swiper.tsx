@@ -18,7 +18,7 @@ export const SwiperCards = () => {
           clickable: true,
         }}
         modules={[Pagination]}
-        className="sm:pb-20"
+        className="pb-16 sm:pb-20"
       >
         {data.map((item: any) => {
           return (
