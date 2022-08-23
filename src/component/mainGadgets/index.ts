@@ -1,3 +1,3 @@
-export { RadioButtons, MainButtons } from "./buttons";
-export { NumberOfFollowers } from "./input";
+export { MainButtons } from "./buttons";
+export { ShowFollowerControl } from "./indicator";
 export { ZoomSlider, SpacingSlider } from "./sliders";

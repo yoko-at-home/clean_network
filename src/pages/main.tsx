@@ -1,11 +1,9 @@
-import { Button, NumberInput, Radio, RadioGroup, Slider } from "@mantine/core";
 import type { NextPage } from "next";
 import {
-  RadioButtons,
-  NumberOfFollowers,
   MainButtons,
   ZoomSlider,
   SpacingSlider,
+  ShowFollowerControl,
 } from "src/component/mainGadgets";
 import { Layout } from "src/layout";
 
@@ -15,8 +13,7 @@ const Main: NextPage = () => {
       <div className="grid grid-cols-1 p-3">
         <div className="flex items-start justify-between">
           <div className="grid grid-cols-2 items-end">
-            <RadioButtons />
-            <NumberOfFollowers />
+            <ShowFollowerControl />
             <ZoomSlider />
             <SpacingSlider />
           </div>

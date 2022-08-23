@@ -1,16 +1,4 @@
-import { Button, Radio, RadioGroup } from "@mantine/core";
-
-export const RadioButtons = () => {
-  return (
-    <div className="">
-      <RadioGroup color="indigo" className="whitespace-nowrap">
-        <Radio value="Show All" label="Show All" />
-        <Radio value="Show Friends" label="Show Friends" />
-        <Radio value="Show Top" label="Show Top" />
-      </RadioGroup>
-    </div>
-  );
-};
+import { Button } from "@mantine/core";
 
 export const MainButtons = () => {
   return (
