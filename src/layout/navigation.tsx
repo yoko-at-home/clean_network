@@ -27,14 +27,14 @@ export const NavMobile = () => {
   const title = opened ? "Close navigation" : "Open navigation";
 
   return (
-    <div className="text-white sm:hidden">
+    <div className="sm:hidden">
       <Burger
         opened={opened}
         onClick={() => setOpened((o) => !o)}
         title={title}
       />
       <div
-        className={`duration-0 fixed top-0  right-0 z-10 h-full w-full transform overflow-auto bg-gradient-to-tl from-green-600 to-emerald-900 px-6 pt-6 ${
+        className={`duration-0 fixed top-0 right-0 z-10 h-full w-full transform overflow-auto bg-gradient-to-b from-[#8DA995] to-[#00008B]/90 px-6 pt-6 ${
           opened ? "translate-x-0" : "translate-x-full"
         }`}
       >
