@@ -1,7 +1,3 @@
-export {
-  RadioButtons,
-  NumberOfFollowers,
-  MainButtons,
-  ZoomSlider,
-  SpacingSlider,
-} from "./gadgets";
+export { RadioButtons, MainButtons } from "./buttons";
+export { NumberOfFollowers } from "./input";
+export { ZoomSlider, SpacingSlider } from "./sliders";
