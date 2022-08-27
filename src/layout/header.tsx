@@ -2,8 +2,6 @@
 import Link from "next/link";
 import { CSSProperties } from "react";
 import { Navigation, NavMobile } from "src/layout/navigation";
-import { Text } from "@mantine/core";
-import { UserIcon } from "src/component/userIcon";
 import { SigninPopover } from "src/component/mainGadgets";
 
 type Props = {
