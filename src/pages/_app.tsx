@@ -1,16 +1,19 @@
 import "src/lib/tailwind.css";
 import type { AppProps } from "next/app";
 import { MantineProvider } from "@mantine/core";
+import { SessionProvider } from "next-auth/react";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
-    <MantineProvider
-      withGlobalStyles
-      withNormalizeCSS
-      emotionOptions={{ key: "mantine", prepend: false }}
-    >
-      <Component {...pageProps} />
-    </MantineProvider>
+    <SessionProvider session={session}>
+      <MantineProvider
+        withGlobalStyles
+        withNormalizeCSS
+        emotionOptions={{ key: "mantine", prepend: false }}
+      >
+        <Component {...pageProps} />
+      </MantineProvider>
+    </SessionProvider>
   );
 }
 

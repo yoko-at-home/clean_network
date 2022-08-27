@@ -4,6 +4,7 @@ import { CSSProperties } from "react";
 import { Navigation, NavMobile } from "src/layout/navigation";
 import { Text } from "@mantine/core";
 import { UserIcon } from "src/component/userIcon";
+import { SigninPopover } from "src/component/mainGadgets";
 
 type Props = {
   inView: boolean;
@@ -30,11 +31,7 @@ export const HeaderPart = ({ inView }: Props) => {
           <div className="hidden sm:block">
             <Navigation />
           </div>
-          <Link href="/user">
-            <a className="mr-2 whitespace-nowrap bg-gradient-to-r from-green-600 to-violet-900 bg-clip-text font-mono text-lg font-semibold tracking-widest text-transparent">
-              <UserIcon />
-            </a>
-          </Link>
+          <SigninPopover />
         </div>
       </div>
     </div>
