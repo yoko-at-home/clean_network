@@ -4,6 +4,8 @@ import { Menu, ActionIcon } from "@mantine/core";
 import { UserIcon } from "src/component/userIcon";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Button } from "@mantine/core";
+import Lottie from "lottie-react";
+import TwitterNotification from "./18887-twitter-notification.json";
 
 export const SigninPopover: FC = () => {
   const { data: session } = useSession();
@@ -17,7 +19,7 @@ export const SigninPopover: FC = () => {
   return (
     <Menu
       size="lg"
-      position="bottom"
+      position="top"
       placement="end"
       transition="pop-top-right"
       control={
@@ -28,11 +30,15 @@ export const SigninPopover: FC = () => {
     >
       <div className="mx-auto">
         {!session && (
-          <div className="flex flex-row justify-end p-5">
-            <Button color="indigo" variant="outline" onClick={() => signIn()}>
-              Sign in with Twitter
-            </Button>
-          </div>
+          <Button
+            color="indigo"
+            variant="outline"
+            size="md"
+            onClick={() => signIn()}
+          >
+            <Lottie animationData={TwitterNotification} loop />
+            &nbsp; Sign in with Twitter
+          </Button>
         )}
         {session && (
           <div className="flex justify-end p-5">
