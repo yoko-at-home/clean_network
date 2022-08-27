@@ -23,7 +23,7 @@ export const SigninPopover: FC = () => {
       placement="end"
       transition="pop-top-right"
       control={
-        <ActionIcon variant="hover" radius="xl" size={30}>
+        <ActionIcon variant="hover" radius="xl" size={45}>
           <UserIcon />
         </ActionIcon>
       }

@@ -9,11 +9,11 @@ const items = [
 ];
 export const Navigation = () => {
   return (
-    <div className="flex leading-6">
+    <div className="flex">
       {items.map(({ href, label }) => {
         return (
           <Link key={href} href={href}>
-            <a className="mr-2 whitespace-nowrap bg-gradient-to-r from-green-600 to-violet-900 bg-clip-text font-mono text-lg font-semibold tracking-widest text-transparent">
+            <a className="mr-2 whitespace-nowrap bg-gradient-to-r from-green-600 to-violet-900 bg-clip-text font-mono text-lg font-semibold leading-10 tracking-widest text-transparent">
               {label}
             </a>
           </Link>
