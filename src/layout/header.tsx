@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { CSSProperties } from "react";
 import { Navigation, NavMobile } from "src/layout/navigation";
-import { SigninPopover } from "src/component/mainGadgets";
+import { SigninPopover } from "src/component/auth";
 
 type Props = {
   inView: boolean;
