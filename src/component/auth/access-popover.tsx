@@ -1,7 +1,6 @@
-import { useRouter } from "next/router";
 import { FC } from "react";
 import { Menu, ActionIcon } from "@mantine/core";
-import { UserIcon } from "src/component/userIcon";
+import { UserIcon } from "src/component/atom/userIcon";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Button } from "@mantine/core";
 import Lottie from "lottie-react";
@@ -35,7 +34,7 @@ export const SigninPopover: FC = () => {
             }}
           >
             <Lottie animationData={TwitterNotification} loop />
-            &nbsp; Sign in with Twitter
+            {"\u00a0"}Sign in with Twitter
           </Button>
         )}
         {session && (
@@ -50,11 +49,10 @@ export const SigninPopover: FC = () => {
             >
               Sign out
             </Button>
-            <span
-              className="bg-cover bg-center text-xs"
-              // style={{ backgroundImage: `url(${session.user.image})` }}
-            >
-              <small> Signed in as </small>
+            <span className="text-xs">
+              <small>
+                {"\u00a0"}Signed in as{"\u00a0"}
+              </small>
               <strong>{session.user.email || session.user.name}</strong>
             </span>
           </div>

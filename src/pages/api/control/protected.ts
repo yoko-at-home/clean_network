@@ -12,12 +12,11 @@ export default async function handler(
 
   if (session) {
     return res.send({
-      content:
-        "This is protected content. You can access this content because you are signed in.",
+      content: "Thank you for signing in",
     });
   }
 
   res.send({
-    error: "You must be signed in to view the protected content on this page.",
+    error: "Signed in to view the content on this page.",
   });
 }

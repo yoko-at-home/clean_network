@@ -1,7 +1,4 @@
 export const pagesPath = {
-  "admin": {
-    $url: (url?: { hash?: string }) => ({ pathname: '/admin' as const, hash: url?.hash })
-  },
   "main": {
     $url: (url?: { hash?: string }) => ({ pathname: '/main' as const, hash: url?.hash })
   },

@@ -1,20 +1,19 @@
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 
 export const AccessDenied = () => {
+  const handleOnClick = () => {
+    (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+      e.preventDefault();
+      signIn();
+    };
+  };
   return (
     <>
-      <h1>Access Denied</h1>
-      <p>
-        <a
-          href="/api/auth/signin"
-          onClick={(e) => {
-            e.preventDefault();
-            signIn();
-          }}
-        >
-          You must be signed in to view this page
+      <div className="text-lg">
+        <a className="" href="/api/auth/signin" onClick={handleOnClick}>
+          To view the contents of this page, click here.
         </a>
-      </p>
+      </div>
     </>
   );
 };
