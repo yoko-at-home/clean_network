@@ -1,6 +1,5 @@
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
-import { Menu, ActionIcon } from "@mantine/core";
 
 export const MyAvatar = () => {
   const { data: session, status } = useSession();
