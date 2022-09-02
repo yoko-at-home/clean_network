@@ -38,7 +38,7 @@ export const ModalComponent = () => {
         {isMobile ? (
           <Contents />
         ) : (
-          <div className="mt-20">
+          <div className="mt-10">
             <button type="button" onClick={handleOnClick}>
               <AnimatedText
                 type="words" // animate words or chars

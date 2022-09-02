@@ -1,6 +1,6 @@
 export const Contents = () => {
   return (
-    <div className="py-20">
+    <div className="py-10">
       <div className="text-lg font-bold">クラスタ</div>
       <div className="text-lg font-bold">汚染度合</div>
       <div>
