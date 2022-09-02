@@ -8,12 +8,10 @@ export const AccessDenied = () => {
     };
   };
   return (
-    <>
-      <div className="text-lg">
-        <a className="" href="/api/auth/signin" onClick={handleOnClick}>
-          To view the contents of this page, click here.
-        </a>
-      </div>
-    </>
+    <div className="text-lg">
+      <a className="" href="/api/auth/signin" onClick={handleOnClick}>
+        To view the contents of this page, click here.
+      </a>
+    </div>
   );
 };
