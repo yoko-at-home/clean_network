@@ -11,11 +11,6 @@ export const SigninPopover: FC = () => {
   const { data: session } = useSession();
   console.log("session", session);
 
-  const router = useRouter();
-  const signOut = () => {
-    router.push("/");
-  };
-
   return (
     <Menu
       size="lg"
@@ -28,23 +23,40 @@ export const SigninPopover: FC = () => {
         </ActionIcon>
       }
     >
-      <div className="mx-auto">
+      <div className="mx-auto p-0">
         {!session && (
           <Button
             color="indigo"
             variant="outline"
             size="md"
-            onClick={() => signIn()}
+            onClick={(e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+              e.preventDefault();
+              signIn();
+            }}
           >
             <Lottie animationData={TwitterNotification} loop />
             &nbsp; Sign in with Twitter
           </Button>
         )}
         {session && (
-          <div className="flex justify-end p-5">
-            <Button color="indigo" variant="outline" onClick={() => signOut()}>
+          <div className="flex justify-between">
+            <Button
+              color="indigo"
+              variant="outline"
+              onClick={(e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+                e.preventDefault();
+                signOut();
+              }}
+            >
               Sign out
             </Button>
+            <span
+              className="bg-cover bg-center text-xs"
+              // style={{ backgroundImage: `url(${session.user.image})` }}
+            >
+              <small> Signed in as </small>
+              <strong>{session.user.email || session.user.name}</strong>
+            </span>
           </div>
         )}
       </div>
