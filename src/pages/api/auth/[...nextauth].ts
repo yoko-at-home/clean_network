@@ -10,15 +10,15 @@ export const authOptions: NextAuthOptions = {
       version: "2.0",
     }),
   ],
-  theme: {
-    colorScheme: "light",
-  },
-  callbacks: {
-    async jwt({ token }) {
-      token.userRole = "admin";
-      return token;
-    },
-  },
+  // theme: {
+  //   colorScheme: "light",
+  // },
+  // callbacks: {
+  //   async jwt({ token }) {
+  //     token.userRole = "admin";
+  //     return token;
+  //   },
+  // },
 };
 
 export default NextAuth(authOptions);
