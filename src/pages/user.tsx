@@ -11,7 +11,7 @@ const User: NextPage = () => {
   const loading = status === "loading";
 
   // When rendering client side don't display anything until loading is complete
-  if (typeof window !== "undefined" && loading) return null;
+  // if (typeof window !== "undefined" && loading) return null;
 
   // If session exists, display content
   return (
