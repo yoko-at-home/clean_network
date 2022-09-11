@@ -10,6 +10,9 @@ export const authOptions: NextAuthOptions = {
       version: "2.0",
     }),
   ],
+  callbacks: {},
+  secret: process.env.NEXTAUTH_SECRET,
+
   // theme: {
   //   colorScheme: "light",
   // },
